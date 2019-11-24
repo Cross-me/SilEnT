@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>留言反馈</title>
+		<link rel="stylesheet" type="text/css" href="css/liuyan.css" />
+	</head>
+	<body>
+		<div class="main">
+			<div class="main_top">
+				<a href="index.html"><h1>SilEnT</h1></a>
+				<h3><a href="#">用户中心</a></h3>
+			</div>
+			<div class="main_center">
+				<h2>留言反馈</h2>
+				<div class="row">
+				    <div class="col-md-12">
+				        <form class="form">
+							<div class="form-group">
+								<h4>留言类型</h4>
+							    <select id="radix" class="form-control1">
+							        <option value="1" selected>其他</option>
+							        <option value="2">问题反馈</option>
+							        <option value="3">功能建议</option>
+							    </select>
+							</div> 
+				            <div class="form-group">
+								<h4>联系方式</h4>
+				                <input id="number" class="form-control" type="text" placeholder="输入您的邮箱">            
+				            </div>
+							<div class="form-group">
+								<h4>留言内容</h4>
+								<textarea id="number" class="form-control" placeholder="请输入留言信息" style="height: 120px;"></textarea>          
+							</div>
+				            <label><input id="submit" class="btn" type="submit" value="提交留言"></label>
+				        </form>
+				    </div>
+				</div>
+				<div class="result-wp">
+				    <div id="result"></div>
+				</div> 
+			</div>
+			<div class="main_bottom">
+				<h2>留言须知</h2>
+				<ul>
+					<li>常用的进制转换工具</li>
+					<li>在数据源框内填写数据源后选择数据技术再点击转换即可。</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="css/register.css" />
+		<script src="js/register.js"></script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="bg"></div>
+			<div class="login">
+				<h1>
+					<a href="index.html">SilEnT</a>
+				</h1>
+				<div class="loginform">
+					<p>
+						<label class="user_login">
+							用户名
+							<br />
+							<input type="text" name="log" id="user" class="input" value size="20" autocapitalize="off" />
+						</label>
+					</p>
+					<p>
+						<label class="user_pass">
+							密码
+							<br />
+							<input type="password" name="pwd" id="password1" class="input" value size="20" />
+						</label>
+					</p>
+					<p>
+						<label class="user_pass">
+							确认密码
+							<br />
+							<input type="password" name="pwd" id="password2" class="input" value size="20" />
+						</label>
+					</p>
+					<table border="0" cellspacing="5" cellpadding="5">
+						<tr>
+							<td>
+								<div id="checkCode" class="code" onclick="createCode(4)"></div>
+							</td>
+							<td> <span onclick="createCode(4)" class="kbq">看不清换一张</span></td>
+						</tr>
+						<tr>
+							<p class="user_login">验证码：</p>
+							<td><input type="text" id="inputCode" class="input_Code" /></td>
+						</tr>
+					</table>
+					<p class="submit">
+						<input type="submit" name="wp-submit" id="wp-submit" class="button" value="注 册" onclick="validateCode()" />
+					</p>
+				</div>
+				<p class="wj">
+					<a href="#">忘记密码</a>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

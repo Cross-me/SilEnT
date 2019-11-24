@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>进制转换</title>
+		<link rel="stylesheet" type="text/css" href="css/jinzhi.css" />
+	</head>
+	<body>
+		<div class="main">
+			<div class="main_top">
+				<a href="index.html"><h1>SilEnT</h1></a>
+				<h3><a href="#">用户中心</a></h3>
+			</div>
+			<div class="main_center">
+				<h2>进制转换</h2>
+				<h4>请输入想要生成的内容</h4>
+				<div class="row">
+				    <div class="col-md-12">
+				        <form class="form">
+				            <div class="form-group">
+				                <label for="number" class="sj">数据源：</label>
+				                <input id="number" class="form-control" type="text" autofocus required placeholder="仅支持整数">            
+				            </div>
+				            <div class="form-group">
+				                <label for="radix" class="sj">数据基数：</label>
+				                <select id="radix" class="form-control1">
+				                    <option value="10" selected>十进制</option>
+				                    <option value="2">二进制</option>
+				                    <option value="8">八进制</option> 
+									<option value="16">十六进制</option>
+									<option value="36">三十六进制</option>
+				                </select>
+				            </div>                   
+				
+				            <label><input id="submit" class="btn" type="submit" value="转换"></label>
+				        </form>
+				    </div>
+				</div>
+				<div class="result-wp">
+				    <div id="result"></div>
+				</div> 
+			</div>
+			<div class="main_bottom">
+				<h2>说明</h2>
+				<ul>
+					<li>常用的进制转换工具</li>
+					<li>在数据源框内填写数据源后选择数据技术再点击转换即可。</li>
+				</ul>
+			</div>
+		</div>
+		<script id="t:result" type="text/template">
+		<div class="item">
+		    <span><%=radix%>进制：</span>
+		    <%=number%>
+		</div>
+		</script>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/baiduTemplate.js"></script>
+		<script src="js/jinzhi.js"></script>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>二维码生成</title>
+		<link rel="stylesheet" type="text/css" href="css/qr.css" />
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<script type="text/javascript" src="js/qrcode.min.js"></script>
+	</head>
+	</head>
+	<body>
+		<div class="main">
+			<div class="main_top">
+				<a href="index.html"><h1>SilEnT</h1></a>
+				<h3><a href="#">用户中心</a></h3>
+			</div>
+			<div class="main_center">
+				<h2>二维码生成</h2>
+				<h4>请输入想要生成的内容</h4>
+				<input id="text" type="text" value="" class="shuru"/>
+				<button id="btn" type="button">点击获取</button>
+				<div id="qrcode" class="qrcode"></div>
+			</div>
+			<div class="main_bottom">
+				<h2>说明</h2>
+				<ul>
+					<li>在输入框内输入需要生成的内容后点击点击生成即可。</li>
+					<li>简单的二维码生成，如有其他样式需求可自行选择其他工具。</li>
+					
+				</ul>
+			</div>
+		</div>
+
+
+
+		<script type="text/javascript">
+			var qrcode = new QRCode(document.getElementById("qrcode"), {
+				width: 150,
+				height: 150
+			});
+
+			function makeCode() {
+				var elText = document.getElementById("text");
+				qrcode.makeCode(elText.value);
+			}
+
+			makeCode();
+
+			$("#text").
+			on("blur", function() {
+				makeCode();
+			}).
+			on("keydown", function(e) {
+				if (e.keyCode == 13) {
+					makeCode();
+				}
+			});
+		</script>
+		<script>
+			window.onload=function (){
+			    var btn = document.getElementById('btn');
+				var qrcode = document.getElementById('qrcode');
+				qrcode.style.display="none";
+				btn.onclick=function(){
+					qrcode.style.display="";
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/number.css" />
+		<script type="text/javascript" src="js/number2words.js"></script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="main_top">
+				<a href="index.html"><h1>SilEnT</h1></a>
+				<h3><a href="#">用户中心</a></h3>
+			</div>
+			<div class="main_center">
+				<h2>数字转大写中文</h2>
+				<h4>请输入想要转换的内容</h4>
+				<div class="foot">
+					<div class="input-box off">
+						<input id="inputs" type="text" value="" />
+					</div>
+				</div>
+				<div class="containeer">
+					<div class="cell">
+						<div class="cell-output" id="output1"></div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="main_bottom">
+				<h2>说明</h2>
+				<ul>
+					<li>在输入框内输入需要转换即可。</li>
+					<li>简单的二维码生成，如有其他样式需求可自行选择其他工具。</li>
+					
+				</ul>
+			</div>
+		</div>
+		<script>
+			var output1 = document.getElementById('output1');
+			var inputs = document.getElementById('inputs');
+			var value = inputs.value;
+			var option1 = {
+				isTag: false
+			};
+			var value = inputs.value;
+			inputs.addEventListener('keyup', function() {
+				value = inputs.value;
+				Number2Wrods.config(option1).putStr(value, 'output1');
+				output4.innerHTML = Number2Wrods.config(option4).putStr(value)
+			});
+			Number2Wrods.config(option1).putStr(value, 'output1');
+		</script>
+	</body>
+</html>
